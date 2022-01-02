@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "axios": "^0.24.0",
+    "js-beautify": "^1.14.0",
+    "jsdom": "^19.0.0",
+    "puppeteer": "^13.0.1"
+  }
+}
