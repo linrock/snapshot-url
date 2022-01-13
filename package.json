@@ -14,7 +14,7 @@
     "bin/*.js"
   ],
   "bin": {
-    "snapshot-url": "./snapshot-url.js"
+    "snapshot-url": "./bin/snapshot-url.js"
   },
   "dependencies": {}
 }
