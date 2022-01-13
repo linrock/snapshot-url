@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const { JSDOM } = require('jsdom');
 const puppeteer = require('puppeteer');
 const beautify = require('js-beautify').html;
