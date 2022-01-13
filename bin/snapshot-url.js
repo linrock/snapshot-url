@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const path = require("path");
 const { getHtmlFromUrl } = require('../src/renderer');
 const { writeFile } = require("../src/file_utils");
