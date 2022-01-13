@@ -1,9 +1,9 @@
 {
   "name": "snapshot-url",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "index.js",
-  "devDependencies": {
+  "dependencies": {
     "axios": "^0.24.0",
     "js-beautify": "^1.14.0",
     "jsdom": "^19.0.0",
@@ -11,10 +11,11 @@
   },
   "files": [
     "bin/",
-    "bin/*.js"
+    "bin/*.js",
+    "src/",
+    "src/*.js"
   ],
   "bin": {
     "snapshot-url": "./bin/snapshot-url.js"
-  },
-  "dependencies": {}
+  }
 }
