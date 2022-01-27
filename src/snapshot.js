@@ -10,6 +10,7 @@ class Snapshot {
     this.url = url;
   }
 
+  /** Use a headless browser to render the DOM */
   async renderDOM() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -36,6 +37,7 @@ class Snapshot {
     return this.dom;
   }
 
+  /** Get rendered html with an option to pretty print it */
   getHtml(options = {}) {
     if (!this.dom) {
       console.error('DOM not rendered yet');
