@@ -7,7 +7,7 @@ const axios = require('axios');
 
 const CSS_NODES = 'link[rel=stylesheet]';
 
-const getHtmlFromUrl = async (url) => {
+const getRenderedDomFromUrl = async (url) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try {
@@ -28,8 +28,12 @@ const getHtmlFromUrl = async (url) => {
  // exit the browser since we rendered the html already
   await browser.close();
 
-  // make modifications to the DOM
-  const dom = new JSDOM(renderedHtml);
+  return new JSDOM(renderedHtml);
+};
+
+const getHtmlFromUrl = async (url) => {
+  // get the rendered DOM and make modifications to it
+  const dom = getRenderedDomFromUrl(url);
 
   /*
   // remove some html tags that we don't need
@@ -73,4 +77,5 @@ const getHtmlFromUrl = async (url) => {
   return finalHtml;
 }
 
+module.exports.getRenderedDomFromUrl = getRenderedDomFromUrl;
 module.exports.getHtmlFromUrl = getHtmlFromUrl;
